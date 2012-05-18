@@ -13,6 +13,8 @@ asset_dir="assets"
 image_dir="images"
 css_dir="css"
 js_dir="js"
+jquery_url="http://code.jquery.com/"
+jquery_file="jquery-1.7.2.min.js"
 # ==========END========= #
 
 if [ "$1" != "" ] ; then 
@@ -31,8 +33,8 @@ if [ "$1" != "" ] ; then
 
   cd "$HOME/$my_projects/$project_name" && touch index.html
   cd "$HOME/$my_projects/$project_name/$asset_dir/$css_dir" && touch app.css && touch reset.css
-  cd "$HOME/$my_projects/$project_name/$asset_dir/$js_dir/vendor" && touch jquery-1.7.2.min.js
-  curl http://code.jquery.com/jquery-1.7.2.min.js  > jquery-1.7.2.min.js
+  cd "$HOME/$my_projects/$project_name/$asset_dir/$js_dir/vendor" && touch "$jquery_file"
+  curl "$jquery_url/$jquery_file"  > "$jquery_file"
 
 
   reset="html, body, div, span, applet, object, iframe,
@@ -87,7 +89,7 @@ table {
 <head>
 	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"/>
 	<title>REPLACEME</title>
-	<script/type=\"text/javascript\" src=\"/$asset_dir/$js_dir/vendor/jquery-1.7.2.min.js\"></script>
+	<script/type=\"text/javascript\" src=\"/$asset_dir/$js_dir/vendor/$jquery_file\"></script>
 	<link rel=\"stylesheet\" href=\"/$asset_dir/$css_dir/reset.css\" type=\"text/css\" media=\"screen\" />
 	<link rel=\"stylesheet\" href=\"/$asset_dir/$css_dir/app.css\" type=\"text/css\" media=\"screen\" />
 </head>
