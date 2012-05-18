@@ -3,8 +3,8 @@
 # Generate a new project scaffold
 
 # Usage:
-# ./newproject.sh projectname
-# Will attempt to create several directories in your Projects folder at
+# ./lazyproject.sh projectname
+# Will attempt to create several directories and files in your project folder at
 # $HOME/$yourprojectfolder/
 
 # =CUSTOMIZE THESE VARS= #
